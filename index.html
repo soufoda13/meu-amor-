@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nosso Amor 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Tela de carta */
+    #carta {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ffe6eb;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      padding: 30px;
+    }
+
+    #carta h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    #carta p {
+      font-size: 1.2em;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    #carta button {
+      margin-top: 30px;
+      padding: 10px 25px;
+      font-size: 1em;
+      background-color: #ff4d88;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    h1 { color: rgb(255, 17, 17); }
+
+    /* Conteúdo principal */
+    #conteudo {
+      display: none;
+      padding-top: 100px;
+    }
+    p { color: red
+    }
+
+    #timer {
+      font-size: 1.8em;
+      background-color: #ffe6eb;
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    button.tocar {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #ff85a2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    img {
+    width: 50%;
+    border-radius:10px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Tela de Carta -->
+  <div id="carta">
+    <h2>💌 Uma mensagem pra você...</h2>
+    <p>
+      Desde o dia em que nos conhecemos, minha vida ficou mais doce, mais leve e cheia de amor. <br>
+      Cada segundo ao seu lado é um presente. Obrigado por ser minha metade. <br>
+      Te amo hoje, amanhã e para sempre. 💖
+    </p>
+    <button onclick="mostrarSite()">Ler o tempo do nosso amor 💕</button>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div id="conteudo">
+    <h1> Caue e Stephane 
+      </h1>
+      <P> ETERNO AMOR!</P>
+      <H3>Estamos juntos há:</H3>
+    <div id="timer">Carregando...</div>
+    <br>
+    <button class="tocar" onclick="document.getElementById('musica').play()">🎶 Tocar música</button>
+    <audio id="musica" loop>
+      <source src="Elvis Presley - Can't Help Falling In Love (Official Audio).mp3" type="audio/mp3">
+    </audio>
+  </div>
+  <img
+  src="IMG_20250130_214306.jpg"
+  alt="💖" />
+  <script>
+    // Função para mostrar o site depois da carta
+    function mostrarSite() {
+      document.getElementById('carta').style.display = 'none';
+      document.getElementById('conteudo').style.display = 'block';
+    }
+
+    // Contador de tempo
+    
+    const startDate = new Date("2025-01-23T00:00:00");
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = agora - startDate;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("timer").innerHTML =
+        `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos 💕`;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+  </script>
+<h1>desde o dia mais incrivel das nossas vidas 💕</h1>
+
+<p>simples, porém feito com muito amor, te amo muito... Você é o amor da minha vida
+  💖.
+  Hoje completamos 3 meses juntos…
+  Parece pouco tempo se eu olho no calendário, mas quando olho pra tudo que a gente viveu, pra cada risada, cada conversa, cada carinho, cada momento em silêncio que mesmo assim dizia tudo… sinto como se já estivéssemos conectados há vidas.
+  
+  Você chegou como quem não queria nada e, sem pedir licença, se tornou tudo.
+  Meu riso mais sincero, meu abrigo em dias difíceis, meu sonho acordado.
+  
+  Em 3 meses, você me mostrou que o amor não precisa ser complicado pra ser forte.
+  Ele só precisa ser leve, verdadeiro e recíproco. E o que a gente tem… é exatamente isso.
+  
+  Obrigado por ser meu apoio, minha inspiração e minha paz.
+  Que venham mais 3, mais 6, mais 12... mais uma vida inteira ao seu lado. 💖
+  Te amo, hoje e sempre.</p>
+
+</body>
+</html>
